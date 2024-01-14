@@ -1,0 +1,29 @@
+.profile {
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.name {
+  font-family: "pretendard";
+  color: #2771fa;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.introduce {
+  font-family: pretendard;
+  text-align: center;
+}
+
+.introduce-text {
+  color: #2771fa;
+  font-weight: 800;
+}
+
+.list {
+  text-align: center;
+  list-style: none;
+}
