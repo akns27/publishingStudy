@@ -1,6 +1,6 @@
 body {
   font-family: Pretendard;
-  background-color: rgb(6, 6, 179);
+  background-color: rgb(108, 108, 238);
   position: relative;
   height: 100vh;
 }
@@ -88,4 +88,25 @@ body {
   font-size: 14px;
   padding-left: 8px;
   color: rgb(118, 118, 118);
+}
+
+.navigation{
+  background-color: white;
+  height: 64px;
+  margin-bottom: 20px;
+}
+.navbar li{
+  display: inline-block;
+  width: 64px;
+  text-align: center;
+  line-height: 64px;
+  margin-right: 12px;
+
+}
+
+.navbar a{
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+  
 }
