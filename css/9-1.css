@@ -1,0 +1,47 @@
+/* 초기 배경 이미지 설정 */
+body{
+  font-family: Wanted Sans;
+}
+
+
+.main-background{
+  width: 100%;
+  height: 600px;
+  background-image: url('../images/검은 모래.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding:1px;
+}
+
+.Title{
+  font-size: 64px;
+  font-weight: 900;
+  color: white;
+  margin-top: 80px;
+  margin-left: 40px;
+  text-align: center;
+}
+
+.Text{
+  font-size: 24px;
+  font-weight: 400;
+  color: white;
+  margin-left: 40px;
+  margin-top:-20px;
+  text-align: center;
+}
+
+.Btn{
+  padding: 16px 24px;
+  margin-left: 40px;
+  border-radius: 4px;
+  background-color: rgb(244, 244, 244);
+  border: none;
+  display: block;
+  margin: auto;
+  font-size: 18px;
+  color: black;
+  text-align: center;
+
+}
