@@ -1,6 +1,7 @@
-body {
+* {
   font-family: Wanted Sans;
-  margin: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 div{
@@ -47,7 +48,7 @@ ul{
   font-weight: 400;
   color: white;
   margin-left: 40px;
-  margin-top: -20px;
+  margin-top: 16px;
   text-align: center;
 }
 
@@ -91,4 +92,61 @@ ul{
   font-size: 20px;
   color: white;
   margin-top: 24px;
+}
+
+.user-form{
+  padding: 40px;
+  width: 28%;
+  height: 500px;
+  background-color:  rgb(49, 49, 49);
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: -26px;
+}
+
+.contact-text{
+  font-size: 32px;
+  font-weight: 600;
+  color:white;
+}
+
+.checkbox-text{
+  display: inline;
+  color:white;
+  font-size: 12px;
+}
+
+.w-100{
+  width: 100%;
+}
+
+.form-text{
+  color:white;
+  margin-bottom: 8px;
+}
+
+.input-margin{
+  margin-top: 24px; 
+}
+
+.w-50{
+  width: 50%;
+  float: left;
+  padding: -12px;
+}
+
+.long-form{
+  height: 160px;
+}
+
+.form-btn{
+  float:right;
+  width: 80px;
+  height: 32px;
+  border: none;
+  color:  rgb(49, 49, 49);
+  background-color: white;
+  font-size: 16px;
+  font-weight: 500;
 }
