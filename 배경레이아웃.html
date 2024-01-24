@@ -10,52 +10,55 @@
 
 <body style="margin: 0px">
     <div class="main-background">
-        <p class="main-title">신비로운 환상 속의 검은 모래</p>
-        <P class="main-text">This sand is sometimes referred to as mystical sand. <br>Because black sand is black rather
-            than<br> the yellowish glow we normally see, looking at it<br> can give the illusion of falling into a black
-            hole.</P>
-        <button class="main-btn">구경하러 가기</button>
+        <p class="main-title">TWS:</p>
+        <P class="main-text">Twenty Four Seven : With : Us
+            <a href="https://weverse.io/tws/feed"><button class="main-btn">구경하러 가기</button></a>
 
     </div>
     <div class="cross-box">
-        <p class="sub-title">검은 모래는 어떻게 만들어질까요?</p>
-        <p class="sub-text">Unlike ordinary sand, black sand is rare <br>and mysterious because black basalt<br> is
-            carved into the waves</p>
+        <p class="sub-title">We have an update!</p>
+        <iframe width="430" height="280" src="https://www.youtube.com/embed/hVAc1Vf2ITU?si=2H54BDLGOXJt-Mwa"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
     </div>
 
-    <div class="user-form">
-        <p class="contact-text">Contact us</p>
-        <form>
-            <div class="input-margin">
-                <p class="form-text">Your email</p>
-                <input type="email" class="form-input">
-            </div>
-
-            <div class="input-margin">
-                <div class="w-50">
-                    <p class="form-text">First name</p>
-                    <input type="text">
+    <div class="form-background">
+        <div class="user-form">
+            <form>
+                <div class="w-100">
+                    <h2>Contact US</h2>
+                    <p style="padding-top: 24px;">Your Email</p>
+                    <input type="email" placeholder="email@example.com" class="form-input">
                 </div>
                 <div class="w-50">
-                    <p class="form-text">Last name</p>
-                    <input type="text">
+                    <p>First Name</p>
+                    <input class="form-input" type="text">
                 </div>
-            </div>
+                <div class="w-50">
+                    <p>Last Name</p>
+                    <input class="form-input" type="text">
+                </div>
+                <div style="clear:both"></div>
 
-            <div style="clear:both"></div>
-            <div class="input-margin">
-                <p class="form-text">Message</p>
-                <input type="text" class="w-100 long-form">
-            </div>
+                <div class="w-100">
+                    <p>Message</p>
+                    <textarea class="form-input long-input"></textarea>
+                </div>
 
-            <div class="input-margin">
-                <input type="checkbox">
-                <p class="checkbox-text">Subscribe</p>
-                <button type="submit" class="form-btn">Send</button>
-            </div>
-        
-
-        </form>
+                <div>
+                    <div style="float: left; padding:8px;">
+                        <input type="checkbox" id="sub">
+                        <label for="sub">Subscribe</label>
+                        <!--  for,id를 같게 해줘서 라벨을 누르면 체크박스가 체크됨 -->
+                    </div>
+                    <div style="float: right; padding:8px;">
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </div>
+                </div>
+                <div style="clear: both;"></div>
+            </form>
+        </div>
     </div>
 </body>
 

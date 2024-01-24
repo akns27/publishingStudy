@@ -4,30 +4,33 @@
   padding: 0;
 }
 
-div{
+div,
+input,
+textarea {
   box-sizing: border-box;
 }
 
 html {
-  line-height : 1.15; /*기본 행간 높이*/
+  line-height: 1.15; /*기본 행간 높이*/
 }
 
 /* h, p{
   margin: 8px;
 } */
 
-li, a{
+li,
+a {
   text-decoration: none;
 }
 
-ul{
+ul {
   list-style: none;
 }
 
 .main-background {
   width: 100%;
   height: 600px;
-  background-image: url("../images/검은 모래.jpg");
+  background-image: url("../images/TWS Sparkling Blue 단체 컨포2.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -37,8 +40,8 @@ ul{
 .main-title {
   font-size: 64px;
   font-weight: 600;
-  color: white;
-  margin-top: 80px;
+  color: rgb(38, 82, 255);
+  margin-top: 180px;
   margin-left: 40px;
   text-align: center;
 }
@@ -46,7 +49,7 @@ ul{
 .main-text {
   font-size: 24px;
   font-weight: 400;
-  color: white;
+  color: rgb(49, 49, 49);
   margin-left: 40px;
   margin-top: 16px;
   text-align: center;
@@ -55,23 +58,23 @@ ul{
 .main-btn {
   padding: 16px 60px;
   border-radius: 4px;
-  background-color: rgb(244, 244, 244);
+  background-color: rgb(38, 82, 255);
   border: none;
   display: block;
   margin-left: auto;
   margin-right: auto;
   font-size: 18px;
-  color: rgb(49, 49, 49);
+  color: white;
   text-align: center;
   margin-top: 50px;
 }
 
 .cross-box {
-  width: 60%;
+  width: 40%;
   max-width: 800px;
   min-width: 500px;
-  height: 200px;
-  background-color: rgb(49, 49, 49);
+  height: 400px;
+  background-color: rgb(38, 82, 255);
   margin-left: auto;
   margin-right: auto;
   padding: 1px;
@@ -85,6 +88,7 @@ ul{
   font-size: 28px;
   color: white;
   margin-top: 32px;
+  padding-bottom: 28px;
 }
 
 .sub-text {
@@ -94,59 +98,55 @@ ul{
   margin-top: 24px;
 }
 
-.user-form{
-  padding: 40px;
-  width: 28%;
-  height: 500px;
-  background-color:  rgb(49, 49, 49);
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  top: -26px;
+.form-background {
+  background-color: rgb(49, 49, 49);
+  padding: 30px;
 }
 
-.contact-text{
-  font-size: 32px;
-  font-weight: 600;
-  color:white;
+.user-form {
+  background-color: rgb(38, 82, 255);
+  padding: 30px;
+  width: 80%;
+  max-width: 600px;
+  min-width: 500px;
+  margin: auto;
+  color: white;
 }
 
-.checkbox-text{
-  display: inline;
-  color:white;
-  font-size: 12px;
-}
-
-.w-100{
+.form-input {
   width: 100%;
+  margin-top: 8px;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid rgb(49, 49, 49);
+  border-radius: 4px;
+  color:rgb(38, 82, 255);
 }
 
-.form-text{
-  color:white;
-  margin-bottom: 8px;
-}
-
-.input-margin{
-  margin-top: 24px; 
-}
-
-.w-50{
+.w-50 {
   width: 50%;
   float: left;
-  padding: -12px;
+  padding: 8px;
 }
 
-.long-form{
-  height: 160px;
+.w-100 {
+  width: 100%;
+  padding: 8px;
 }
 
-.form-btn{
-  float:right;
-  width: 80px;
-  height: 32px;
-  border: none;
-  color:  rgb(49, 49, 49);
+.long-input {
+  height: 200px;
+}
+
+.submit-btn {
+  padding: 8px 32px;
+  font-size: 18px;
   background-color: white;
-  font-size: 16px;
-  font-weight: 500;
+  border: 1px solid rgb(49, 49, 49);
+  border-radius: 4px;
+  color: rgb(38, 82, 255);
+}
+
+input::placeholder{
+  color:rgb(202, 202, 202);
 }
