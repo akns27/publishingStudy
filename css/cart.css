@@ -60,16 +60,11 @@ table {
   margin-top: 32px;
   margin-left: 40px;
   border-radius: 8px;
-  /* margin: auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0; */
+  margin: auto;
+
 }
 
-.main-table th,
-.main-table td {
+.main-table th, .main-table td {
   padding: 24px;
   border: none;
   border-bottom: 1px solid white;
