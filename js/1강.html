@@ -11,18 +11,17 @@
 <body>
 
   <div class="alert-box" id="alert">알림창<button
-      onclick="alertNone()">닫기</button></div>
+      onclick="alert('none')">닫기</button></div>
 
-  <button onclick="alertBlock()">열기</button>
+  <button onclick="alert('block')">열기</button>
+  <button onclick="alert('block')">열기</button>
 
 
   <script>
-    function alertNone() {
-      document.getElementById('alert').style.display = 'none'
+    function alert(파라미터) { 
+      document.getElementById('alert').style.display = 파라미터;
     }
-    function alertBlock() {
-      document.getElementById('alert').style.display = 'block'
-    }
+
   </script>
 
 </body>
