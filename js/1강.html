@@ -10,16 +10,23 @@
 
 <body>
 
-  <div class="alert-box" id="alert">알림창<button
-      onclick="alert('none')">닫기</button></div>
+  <div class="alert-box">
+    <p id="description">알림창입니다.</p>
 
-  <button onclick="alert('block')">열기</button>
-  <button onclick="alert('block')">열기</button>
+    <button onclick="alert('none')">닫기</button>
+  </div>
+
+  <button onclick="alert('block'); description('아이디를 입력해주세요.')">버튼1 열기</button>
+  <button onclick="alert('block'); description('비밀번호를 입력해주세요.')">버튼2 열기</button>
 
 
   <script>
-    function alert(파라미터) { 
-      document.getElementById('alert').style.display = 파라미터;
+    function alert(파라미터) {
+      document.getElementsByClassName('alert-box')[0].style.display = 파라미터;
+    }
+    
+    function description(파라미터){
+      document.getElementById('description').innerText = 파라미터;
     }
 
   </script>
