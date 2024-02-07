@@ -7,11 +7,18 @@
   <title>navbar</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/js2~.css">
 </head>
 
 <body>
+  <button id="primary-btn">로그인</button>
 
+  <div class="black-bg">
+    <div class="white-bg">
+      <h4>로그인되었습니다.</h4>
+      <button class="btn btn-danger" id="close">닫기</button>
+    </div>
+  </div>
 
   <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
@@ -31,16 +38,22 @@
   </ul>
 
   <script>
-
     //document.querySelector('.list-group')//css 셀렉터 문법으로 사용, id는 #~~, but 맨 위 한개만 찾아줌
     //querySelectorAll은 해당하는 모든 요소 찾음
     //단일 요소가 아닌 원하는 걸 찾으려면 [1]같은 인덱싱 필요
 
-    document.querySelector('.navbar-toggler').addEventListener("click", function(){
-      document.querySelector('.list-group').classList.toggle('show');//toggle = show가 있으면 제거 없으면 추가
+    document.querySelector('.navbar-toggler').addEventListener("click", function () {
+      document.querySelector('.list-group').classList.toggle('show');//toggle = show가 있으면 제거 없으면 추가, add는 넣는 것만
     });
-  </script> 
-    
+
+    document.querySelector('#close').addEventListener('click', function () {
+      document.querySelector('.black-bg').style.display = 'none';
+    });
+
+    document.querySelector('#primary-btn').addEventListener('click', function () {
+      document.querySelector('.black-bg').style.display = 'block';
+    });
+  </script>
 
 
 
