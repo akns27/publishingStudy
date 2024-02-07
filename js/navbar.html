@@ -32,16 +32,15 @@
 
   <script>
 
-    document.querySelector('.list-group')//css 셀렉터 문법으로 사용, id는 #~~, but 맨 위 한개만 찾아줌
+    //document.querySelector('.list-group')//css 셀렉터 문법으로 사용, id는 #~~, but 맨 위 한개만 찾아줌
     //querySelectorAll은 해당하는 모든 요소 찾음
-    //원하는 걸 찾으려면 [1]같은 인덱싱 필요
+    //단일 요소가 아닌 원하는 걸 찾으려면 [1]같은 인덱싱 필요
 
-    document.getElementsByClassName('navbar-toggler')[0].addEventListener("click", function(){
-      document.getElementsByClassName('list-group')[0].classList.toggle('show');//toggle = show가 있으면 제거 없으면 추가
+    document.querySelector('.navbar-toggler').addEventListener("click", function(){
+      document.querySelector('.list-group').classList.toggle('show');//toggle = show가 있으면 제거 없으면 추가
     });
-  </script>
+  </script> 
     
-
 
 
 
