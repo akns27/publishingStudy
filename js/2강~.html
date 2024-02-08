@@ -43,15 +43,15 @@
     //단일 요소가 아닌 원하는 걸 찾으려면 [1]같은 인덱싱 필요
 
     document.querySelector('.navbar-toggler').addEventListener("click", function () {
-      document.querySelector('.list-group').classList.toggle('show');//toggle = show가 있으면 제거 없으면 추가, add는 넣는 것만
+      document.querySelector('.list-group').classList.toggle('show');//toggle = show가 있으면 제거 없으면 추가, addClass는 넣는 것만
     });
 
     document.querySelector('#close').addEventListener('click', function () {
-      document.querySelector('.black-bg').style.display = 'none';
+      document.querySelector('.black-bg').classList.remove('show-modal');
     });
 
     document.querySelector('#primary-btn').addEventListener('click', function () {
-      document.querySelector('.black-bg').style.display = 'block';
+      document.querySelector('.black-bg').classList.add('show-modal');
     });
   </script>
 

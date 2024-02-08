@@ -59,7 +59,16 @@ table {
   background: rgba(0, 0, 0, 0.5);
   z-index: 5;
   padding: 30px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s;
 }
+
+.show-modal{
+  visibility: visible;
+  opacity: 1;
+}
+
 .white-bg {
   background: white;
   border-radius: 5px;
@@ -75,3 +84,4 @@ table {
   background: #fd5fb9;
   color:white;
 }
+
