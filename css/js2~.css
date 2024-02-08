@@ -25,6 +25,7 @@ ul {
 }
 html,body {
   height: 100%;
+  font-family: Pretendard;
 }
 img,picture,video,canvas,svg {
   display: block;
@@ -85,3 +86,9 @@ table {
   color:white;
 }
 
+.main-bg{
+  padding: 100px 20px;
+  /* background-image: url(); */
+  background-color: rgba(0, 0, 0, 1);
+  color: white;
+}
