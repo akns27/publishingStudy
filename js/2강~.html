@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>navbar</title>
+  <title>Js</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/js2~.css">
@@ -54,22 +54,26 @@
   </div>
   <script>
 
-    document.getElementById('login-btn').addEventListener('click', function(){
+    document.getElementById('login-btn').addEventListener('click', function(e){
       
-      const userid = document.getElementById('id').value;
-      const userpassword = document.getElementById('password').value;
+      const userId = document.getElementById('id').value;
+      const userPassword = document.getElementById('password').value;
+      const userPasswordLen = document.getElementById('password').value.length;
 
-      event.preventDefault();//기본 제출 동작을 막기
-
-      if(userid==='' && userpassword===''){
+      
+      e.preventDefault();//기본 제출 동작을 막기
+      if(userId==='' && userPassword===''){
         alert('입력 칸을 채워주세요');
         return; // 두 입력상자가 모두 비어있으면 함수 끝
-    } else if(userid===''){
+    } else if(userId===''){
         alert('아이디를 입력해주세요');
         return; // 아이디 입력상자가 비어있으면 함수 끝
-    } else if(userpassword===''){
+    } else if(userPassword===''){
         alert('비밀번호를 입력해주세요');
         return; // 비밀번호 입력상자가 비어있으면 함수 끝
+    } else if (userPasswordLen<6){
+      alert('비밀번호를 6자 이상 입력하세요')
+      return; //비밀번호 길이가 6자 미만이면 함수 끝
     }
 
     document.getElementById("login-form").submit();//if문 통과하면 제출
