@@ -20,7 +20,7 @@
           <label for="id">아이디를 입력해주세요</label>
           <input type="text" class="form-control" id="id">
         </div>
-        <div id="id-warning" class="warning">5자리 아상으로 설정해주세요</div>
+        <div id="id-warning" class="warning">자리 아상으로 설정해주세요</div>
         <div class="my-3">
           <label for="password">비밀번호를 입력해주세요</label>
           <input type="password" class="form-control" id="password">
@@ -60,7 +60,6 @@
 
       const userId = document.getElementById('id').value;
       const userPassword = document.getElementById('password').value;
-      const userIdLen = document.getElementById('id').value.length;
       const userPasswordLen = document.getElementById('password').value.length;
 
 
@@ -75,14 +74,7 @@
         alert('비밀번호를 입력해주세요');
         return; // 비밀번호 입력상자가 비어있으면 함수 끝
       }
-      
-      if (userIdLen < 5) {
-        document.getElementById('id-warning').style.display='block';
-        return;
-      } else {
-        document.getElementById('id-warning').style.display='none';
-        return ;
-      }
+
 
       if (userPasswordLen < 6) {
         document.getElementById('password-warning').style.display='block';
