@@ -97,7 +97,7 @@ h1,h2,h3,h4,h5,h6 {
 .main-bg {
   padding: 100px 20px;
   /* background-image: url(); */
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgb(15, 15, 15);
   color: white;
 }
 
@@ -107,5 +107,17 @@ h1,h2,h3,h4,h5,h6 {
   color: red;
   display: none;
   margin-top : -8px;
+}
 
+.badge{
+  width: 88px;
+  height: 40px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+
+}
+.bg-dark{
+  background-color: rgb(15, 15, 15);
 }

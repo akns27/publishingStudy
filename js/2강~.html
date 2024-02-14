@@ -35,7 +35,8 @@
 
   <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
-      <span class="navbar-brand">Navbar</span>
+      <span class="navbar-brand">JakeFromPkw</span>
+      <span class="badge bg-dark ms-auto mx-3">Dark 🌙</span>
       <button class="navbar-toggler" type="button">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -51,9 +52,25 @@
   </ul>
 
   <div class="main-bg">
-    <h4>Shirts on Sale</h4>
+    <h4>JFP on Sale</h4>
     <button id="primary-btn">로그인</button>
   </div>
+
+  <script>
+    let countClear = 0;
+    document.querySelector('.badge').addEventListener('click', function () {
+      countClear++;
+      if (countClear % 2 == 1) {
+        document.querySelector('.badge').innerHTML = 'Light ☀️';
+      } else {
+        document.querySelector('.badge').innerHTML = 'Dark 🌙';
+      }
+    });
+
+
+
+  </script>
+
   <script>
 
     document.getElementById('login-btn').addEventListener('click', function (e) {
@@ -71,10 +88,10 @@
         return; // 함수 종료
       } else if (userId === '') {
         alert('아이디를 입력해주세요');
-        return; 
+        return;
       } else if (userPassword === '') {
         alert('비밀번호를 입력해주세요');
-        return; 
+        return;
       }
 
       if (userIdLen < 5 || userPasswordLen < 6) {
