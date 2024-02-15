@@ -121,3 +121,12 @@ h1,h2,h3,h4,h5,h6 {
 .bg-dark{
   background-color: rgb(15, 15, 15);
 }
+
+.dark-mode{
+  background-color: rgb(15, 15, 15);
+  color: white;
+}
+
+.dark-mode .black-bg {
+  background-color: white; /* !important를 사용하여 다른 스타일보다 우선 적용되도록 설정할 수 있습니다. */
+}

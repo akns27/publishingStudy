@@ -61,10 +61,11 @@
     document.querySelector('.badge').addEventListener('click', function () {
       countClear++;
       if (countClear % 2 == 1) {
-        document.querySelector('.badge').innerHTML = 'Light ☀️';
+        document.querySelector('.badge').innerHTML = 'Light 🍳';
       } else {
         document.querySelector('.badge').innerHTML = 'Dark 🌙';
       }
+      document.querySelector('body').classList.toggle('dark-mode');
     });
 
 
