@@ -33,9 +33,9 @@
     </div>
   </div>
 
-  <nav class="navbar navbar-light bg-light">
+  <nav class="navbar">
     <div class="container-fluid">
-      <span class="navbar-brand">JakeFromPkw</span>
+      <span class="navbar-brand" style="color:#fd5fb9;">JakeFromPkw</span>
       <span class="badge bg-dark ms-auto mx-3">Dark 🌙</span>
       <button class="navbar-toggler" type="button">
         <span class="navbar-toggler-icon"></span>
@@ -51,8 +51,8 @@
     <li class="list-group-item">And a fifth one</li>
   </ul>
 
-  <div class="main-bg">
-    <h4>JFP on Sale</h4>
+  <div id="main-banner" class="main-banner-dark">
+    <h4 >JFP on Sale</h4>
     <button id="primary-btn">로그인</button>
   </div>
 
@@ -66,10 +66,20 @@
         document.querySelector('.badge').innerHTML = 'Dark 🌙';
       }
       document.querySelector('body').classList.toggle('dark-mode');
+      document.querySelector('.navbar').classList.toggle('navbar-dark');
+      document.querySelector('.navbar').classList.toggle('bg-dark');
+      document.querySelector('.badge').classList.toggle('bg-dark');
+      document.querySelector('.badge').classList.toggle('bg-light');
+      document.querySelector('#main-banner').classList.toggle('main-banner-dark');
+      document.querySelector('#main-banner').classList.toggle('main-banner-light');
+      document.querySelectorAll('.list-group-item').forEach(function (item) {
+        item.classList.toggle('list-dark');
+      });
+
     });
 
 
-// asdf
+
   </script>
 
   <script>
