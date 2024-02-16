@@ -26,8 +26,8 @@
           <input type="password" class="form-control" id="password">
         </div>
         <div id="password-warning" class="warning" style="margin-bottom: 24px;">특수문자를 포함하여 6자리 이상으로 설정해주세요</div>
-        <button type="submit" class="btn btn-primary" id="login-btn">로그인</button>
-        <button type="button" class="btn btn-danger" id="close">닫기</button>
+        <button type="submit" class="btn btn-primary form-btn" id="login-btn">로그인</button>
+        <button type="button" class="btn btn-danger form-btn" id="close">닫기</button>
       </form>
 
     </div>
@@ -48,7 +48,7 @@
     <li class="list-group-item">A second item</li>
     <li class="list-group-item">A third item</li>
     <li class="list-group-item">A fourth item</li>
-    <li class="list-group-item">And a fifth one</li>
+    <li class="list-group-item">And a fifth one</li> 
   </ul>
 
   <div id="main-banner" class="main-banner-dark">
@@ -67,7 +67,11 @@
       }
       document.querySelector('body').classList.toggle('dark-mode');
       document.querySelector('.navbar').classList.toggle('navbar-dark');
-      document.querySelector('.navbar').classList.toggle('bg-dark');
+      // document.querySelector('.navbar').classList.toggle('bg-dark');
+      document.querySelector('.white-bg').classList.toggle('login-form-dark');
+      document.querySelector('.warning').classList.toggle('warning-dark');
+      document.querySelector('.form-btn').classList.toggle('btn-primary');
+      document.querySelector('.form-btn').classList.toggle('btn-dark');
       document.querySelector('.badge').classList.toggle('bg-dark');
       document.querySelector('.badge').classList.toggle('bg-light');
       document.querySelector('#main-banner').classList.toggle('main-banner-dark');

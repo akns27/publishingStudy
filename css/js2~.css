@@ -95,6 +95,54 @@ h1,h2,h3,h4,h5,h6 {
   font-size: 16px;
 }
 
+.btn-primary{
+  width: 80px;
+  height: 40px;
+  background-color: white;
+  border: 2px solid #fd5fb9;
+  border-radius: 4px;
+  color: #fd5fb9;
+}
+.btn-primary:hover{
+  background-color: #fd5fb9;
+  border: none;
+}
+.btn-primary:active{
+  background-color: #c50070;
+}
+
+.btn-dark{
+  width: 80px;
+  height: 40px;
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 4px;
+  color: #fd5fb9;
+}
+
+.btn-dark:hover{
+  background-color: #fd5fb9;
+  border: 2px solid white;
+}
+
+.btn-dark:active{
+  background-color: #c50070;
+  border: 2px solid white;
+}
+
+.btn-danger{
+  width: 80px;
+  height: 40px;
+  background-color: #e4e4e4;
+  border: 2px solid #e4e4e4;
+  border-radius: 4px;
+}
+.btn-danger:hover .btn-danger:active{
+  background-color: rgb(15, 15, 15);
+  border: none;
+}
+
+
 .main-banner-dark {
   padding: 100px 20px;
   /* background-image: url(); */
@@ -145,4 +193,13 @@ h1,h2,h3,h4,h5,h6 {
 .list-dark{
   background-color: rgb(15, 15, 15);
   color: rgb(247, 247, 247);
+}
+
+.login-form-dark{
+  background-color: #fd5fb9;
+  color: rgb(15, 15, 15);
+}
+
+.warning-dark{
+  color: white;
 }
