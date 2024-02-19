@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <p>태조 이성계가 태어난 년도는?</p>
+  <input type="text" id="answer">
+  <button id="send-answer">제출</button>
+
+  <script>
+
+    let warnigStack = 0;
+
+    document.querySelector("#send-answer").addEventListener("click", function () {
+      let answer = document.querySelector("#answer").value;
+
+      if (answer == "1335") {
+        alert("정답입니다🙆‍♂️");
+      } else {
+        if (warnigStack >= 3) {
+          alert("하... 검색이라도 해봐요!")
+        } else {
+          alert("오답이에용!😡");
+          warnigStack++;
+        }
+      }
+    });
+    
+  </script>
+</body>
+
+</html>
+<!-- 
+document.querySelector('.navbar-toggler').addEventListener("click", function () {
+  document.querySelector('.list-group').classList.toggle('show');//toggle = show가 있으면 제거 없으면 추가, addClass는 넣는 것만
+}); -->
