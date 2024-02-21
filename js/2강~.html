@@ -17,16 +17,22 @@
       <h4>로그인하세요</h4>
       <form action="../html/success.html" id="login-form">
         <div class="my-3">
-          <label for="id">아이디를 입력해주세요</label>
-          <input type="text" class="form-control" id="id">
+          <label for="id">이메일을 입력해주세요</label>
+          <input type="text" class="form-control" id="email">
         </div>
-        <div id="id-warning" class="warning">5자리 이상으로 설정해주세요</div>
+        <div id="email-verified-warning" class="warning">이메일 형식에 맞게 입력해주세요</div>
+        <div id="email-len-warning" class="warning">5자리 이상으로 설정해주세요</div>
         <div class="my-3">
           <label for="password">비밀번호를 입력해주세요</label>
           <input type="password" class="form-control" id="password">
         </div>
         <div id="password-warning" class="warning" style="margin-bottom: 24px;">특수문자를 포함하여 6자리 이상으로 설정해주세요</div>
-        <button type="submit" class="btn btn-primary form-btn" id="login-btn">로그인</button>
+
+        <button type="submit" class="btn btn-primary-login form-btn" id="login-btn">로그인</button>
+        <!-- onmousedown="this.style.backgroundColor='#ed3ea1'; this.style.border='none';"
+        onmouseup="this.style.backgroundColor='white'; this.style.border='2px solid #fd5fb9';
+        this.style.borderRadius='4px'; this.style.color='#fd5fb9';" 이걸 버튼안에 넣으면 active가 적용이 됨-->
+
         <button type="button" class="btn btn-danger form-btn" id="close">닫기</button>
       </form>
 
@@ -48,13 +54,34 @@
     <li class="list-group-item">A second item</li>
     <li class="list-group-item">A third item</li>
     <li class="list-group-item">A fourth item</li>
-    <li class="list-group-item">And a fifth one</li> 
+    <li class="list-group-item">And a fifth one</li>
   </ul>
 
   <div id="main-banner" class="main-banner-dark">
-    <h4 >JFP on Sale</h4>
+    <h4>JFP on Sale</h4>
     <button id="primary-btn">로그인</button>
   </div>
+
+  <div class="alert alert-danger">
+    <span id="time-count">5</span>초 이내 구매 시 사은품 증정!
+  </div>
+  <script>
+
+    setTimeout(function () {
+      document.querySelector('.alert').style.display = 'none';
+    }, 5000);//(){실행할 기능}, ms
+    // setInterval(function(){},1000); setInterval은 ms초마다 반복
+
+    let num = 5;
+
+    setInterval(function () {
+      num--;
+      if (num > 0) {
+        document.querySelector('#time-count').innerHTML = num;
+      }
+    }, 1000);
+
+  </script>
 
   <script>
     let countClear = 0;
@@ -70,7 +97,7 @@
       // document.querySelector('.navbar').classList.toggle('bg-dark');
       document.querySelector('.white-bg').classList.toggle('login-form-dark');
       document.querySelector('.warning').classList.toggle('warning-dark');
-      document.querySelector('.form-btn').classList.toggle('btn-primary');
+      document.querySelector('.form-btn').classList.toggle('btn-primary-login');
       document.querySelector('.form-btn').classList.toggle('btn-dark');
       document.querySelector('.badge').classList.toggle('bg-dark');
       document.querySelector('.badge').classList.toggle('bg-light');
@@ -89,19 +116,21 @@
   <script>
 
     document.getElementById('login-btn').addEventListener('click', function (e) {
-      const userId = document.getElementById('id').value;
+      const userEmail = document.getElementById('email').value;
       const userPassword = document.getElementById('password').value;
-      const userIdLen = document.getElementById('id').value.length;
-      const userPasswordLen = document.getElementById('password').value.length;
+      const userEmailLen = userEmail.length;
+      const userPasswordLen = userPassword.length;
+      const emailPattern=/^[a-zA-Z0-9+-\_.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+
 
       // 기본 제출 동작 막기
       e.preventDefault();
 
       // 입력 칸이 비어있는 경우 경고 표시
-      if (userId === '' && userPassword === '') {
+      if (userEmail === '' && userPassword === '') {
         alert('입력 칸을 채워주세요');
         return; // 함수 종료
-      } else if (userId === '') {
+      } else if (userEmail === '') {
         alert('아이디를 입력해주세요');
         return;
       } else if (userPassword === '') {
@@ -109,12 +138,14 @@
         return;
       }
 
-      if (userIdLen < 5 || userPasswordLen < 6) {
+      
+
+      if (userEmailLen < 5 || userPasswordLen < 6) {
         // 경고 메시지 표시
-        if (userIdLen < 5) {
-          document.getElementById('id-warning').style.display = 'block';
+        if (userEmailLen < 5) {
+          document.getElementById('email-len-warning').style.display = 'block';
         } else {
-          document.getElementById('id-warning').style.display = 'none';
+          document.getElementById('email-len-warning').style.display = 'none';
         }
 
         if (userPasswordLen < 6) {
@@ -122,10 +153,21 @@
         } else {
           document.getElementById('password-warning').style.display = 'none';
         }
+
+        if (emailPattern.test(userEmail)) {
+        document.getElementById('email-verified-warning').style.display = 'none';
+
+      } else{
+        document.getElementById('email-verified-warning').style.display = 'block';
+        return;
+      }
+      
       } else {
         // 조건을 모두 충족하면 폼 제출
         document.getElementById("login-form").submit();
       }
+
+
     });
 
   </script>
@@ -135,6 +177,7 @@
     //document.querySelector('.list-group')//css 셀렉터 문법으로 사용, id는 #~~, but 맨 위 한개만 찾아줌
     //querySelectorAll은 해당하는 모든 요소 찾음
     //단일 요소가 아닌 원하는 걸 찾으려면 [1]같은 인덱싱 필요
+
 
     document.querySelector('.navbar-toggler').addEventListener("click", function () {
       document.querySelector('.list-group').classList.toggle('show');//toggle = show가 있으면 제거 없으면 추가, addClass는 넣는 것만
@@ -148,6 +191,8 @@
       document.querySelector('.black-bg').classList.add('show-modal');
     });
   </script>
+
+
   <!-- 부트스트랩 -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

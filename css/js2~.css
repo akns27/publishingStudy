@@ -95,7 +95,7 @@ h1,h2,h3,h4,h5,h6 {
   font-size: 16px;
 }
 
-.btn-primary{
+.btn-primary-login{
   width: 80px;
   height: 40px;
   background-color: white;
@@ -103,13 +103,16 @@ h1,h2,h3,h4,h5,h6 {
   border-radius: 4px;
   color: #fd5fb9;
 }
-.btn-primary:hover{
+.btn-primary-login:hover{
   background-color: #fd5fb9;
   border: none;
 }
-.btn-primary:active{
-  background-color: #c50070;
-}
+/* .btn-primary-login:active{
+  background-color: #ff52b4;
+  border: none;
+} */
+
+
 
 .btn-dark{
   width: 80px;
@@ -169,6 +172,7 @@ h1,h2,h3,h4,h5,h6 {
   color: red;
   display: none;
   margin-top : -8px;
+  margin-bottom: 8px;
 }
 
 .badge{
@@ -208,4 +212,9 @@ h1,h2,h3,h4,h5,h6 {
 
 .warning-dark{
   color: white;
+}
+
+.alert{
+  border-radius: 0px;
+  border: none;
 }
