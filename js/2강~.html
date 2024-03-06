@@ -27,11 +27,10 @@
           <input type="password" class="form-control" id="password">
         </div>
         <div id="password-warning" class="warning" style="margin-bottom: 24px;">특수문자를 포함하여 6자리 이상으로 설정해주세요</div>
+        <div id="password-verified-warning" class="warning" style="margin-bottom: 24px;">대문자를 최소 1개이상 포함시켜주세요</div>
 
         <button type="submit" class="btn btn-primary-login form-btn" id="login-btn">로그인</button>
-        <!-- onmousedown="this.style.backgroundColor='#ed3ea1'; this.style.border='none';"
-        onmouseup="this.style.backgroundColor='white'; this.style.border='2px solid #fd5fb9';
-        this.style.borderRadius='4px'; this.style.color='#fd5fb9';" 이걸 버튼안에 넣으면 active가 적용이 됨-->
+        
 
         <button type="button" class="btn btn-danger form-btn" id="close">닫기</button>
       </form>
@@ -65,6 +64,27 @@
   <div class="alert alert-danger">
     <span id="time-count">5</span>초 이내 구매 시 사은품 증정!
   </div>
+
+  <div style="overflow: hidden;">
+  <div class="slide-container">
+    <div class="slide-box">
+      <img src="car1.png">
+    </div>
+    <div class="slide-box">
+      <img src="car2.png">
+    </div>
+    <div class="slide-box">
+      <img src="car3.png">
+    </div>
+  </div>
+</div>
+
+  <button class="slide-1">1</button>
+  <button class="slide-2">2</button>
+  <button class="slide-3">3</button>
+
+
+
   <script>
 
     setTimeout(function () {
@@ -118,9 +138,10 @@
     document.getElementById('login-btn').addEventListener('click', function (e) {
       const userEmail = document.getElementById('email').value;
       const userPassword = document.getElementById('password').value;
-      const userEmailLen = userEmail.length;
+      // const userEmailLen = userEmail.length;
       const userPasswordLen = userPassword.length;
       const emailPattern=/^[a-zA-Z0-9+-\_.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+      const passwordPattern = /[A-Z]/;
 
 
       // 기본 제출 동작 막기
@@ -140,13 +161,13 @@
 
       
 
-      if (userEmailLen < 5 || userPasswordLen < 6) {
-        // 경고 메시지 표시
-        if (userEmailLen < 5) {
-          document.getElementById('email-len-warning').style.display = 'block';
-        } else {
-          document.getElementById('email-len-warning').style.display = 'none';
-        }
+      // if (userEmailLen < 5 || userPasswordLen < 6) {
+      //   // 경고 메시지 표시
+      //   if (userEmailLen < 5) {
+      //     document.getElementById('email-len-warning').style.display = 'block';
+      //   } else {
+      //     document.getElementById('email-len-warning').style.display = 'none';
+      //   }
 
         if (userPasswordLen < 6) {
           document.getElementById('password-warning').style.display = 'block';
@@ -154,20 +175,24 @@
           document.getElementById('password-warning').style.display = 'none';
         }
 
-        if (emailPattern.test(userEmail)) {
-        document.getElementById('email-verified-warning').style.display = 'none';
+      // } 
 
-      } else{
+      if (!emailPattern.test(userEmail)) {
         document.getElementById('email-verified-warning').style.display = 'block';
         return;
+      } else{
+        document.getElementById('email-verified-warning').style.display = 'none';
+        // document.getElementById("login-form").submit(); 계속 오류발생!
       }
+
+      if(!passwordPattern.test(userPassword)){
+        document.getElementById('password-verified-warning').style.display = 'block';
+        return;
+      } else{
+        document.getElementById('password-verified-warning').style.display = 'none';
+      }
+
       
-      } else {
-        // 조건을 모두 충족하면 폼 제출
-        document.getElementById("login-form").submit();
-      }
-
-
     });
 
   </script>

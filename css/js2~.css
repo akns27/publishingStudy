@@ -218,3 +218,15 @@ h1,h2,h3,h4,h5,h6 {
   border-radius: 0px;
   border: none;
 }
+
+.slide-container {
+  width: 300vw;
+  transform: translateX(-100vw);
+}
+.slide-box {
+  width: 100vw;
+  float: left;
+}
+.slide-box img {
+  width: 100%;
+} 
