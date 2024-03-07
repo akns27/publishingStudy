@@ -30,7 +30,7 @@
         <div id="password-verified-warning" class="warning" style="margin-bottom: 24px;">대문자를 최소 1개이상 포함시켜주세요</div>
 
         <button type="submit" class="btn btn-primary-login form-btn" id="login-btn">로그인</button>
-        
+
 
         <button type="button" class="btn btn-danger form-btn" id="close">닫기</button>
       </form>
@@ -66,24 +66,34 @@
   </div>
 
   <div style="overflow: hidden;">
-  <div class="slide-container">
-    <div class="slide-box">
-      <img src="car1.png">
-    </div>
-    <div class="slide-box">
-      <img src="car2.png">
-    </div>
-    <div class="slide-box">
-      <img src="car3.png">
+    <div class="slide-container">
+      <div class="slide-box">
+        <img src="car1.png">
+      </div>
+      <div class="slide-box">
+        <img src="car2.png">
+      </div>
+      <div class="slide-box">
+        <img src="car3.png">
+      </div>
     </div>
   </div>
-</div>
 
-  <button class="slide-1">1</button>
-  <button class="slide-2">2</button>
-  <button class="slide-3">3</button>
+  <button class="slide-1 carouselBtn">1</button>
+  <button class="slide-2 carouselBtn">2</button>
+  <button class="slide-3 carouselBtn">3</button>
 
-
+  <script>
+    document.querySelector('.slide-1').addEventListener('click', function () {
+      document.querySelector('.slide-container').style.transform = 'translateX(0vw)';
+    });   
+    document.querySelector('.slide-2').addEventListener('click', function () {
+      document.querySelector('.slide-container').style.transform = 'translateX(-100vw)';
+    });   
+    document.querySelector('.slide-3').addEventListener('click', function () {
+      document.querySelector('.slide-container').style.transform = 'translateX(-200vw)';
+    });   
+  </script>
 
   <script>
 
@@ -140,7 +150,7 @@
       const userPassword = document.getElementById('password').value;
       // const userEmailLen = userEmail.length;
       const userPasswordLen = userPassword.length;
-      const emailPattern=/^[a-zA-Z0-9+-\_.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+      const emailPattern = /^[a-zA-Z0-9+-\_.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
       const passwordPattern = /[A-Z]/;
 
 
@@ -159,7 +169,7 @@
         return;
       }
 
-      
+
 
       // if (userEmailLen < 5 || userPasswordLen < 6) {
       //   // 경고 메시지 표시
@@ -169,30 +179,30 @@
       //     document.getElementById('email-len-warning').style.display = 'none';
       //   }
 
-        if (userPasswordLen < 6) {
-          document.getElementById('password-warning').style.display = 'block';
-        } else {
-          document.getElementById('password-warning').style.display = 'none';
-        }
+      if (userPasswordLen < 6) {
+        document.getElementById('password-warning').style.display = 'block';
+      } else {
+        document.getElementById('password-warning').style.display = 'none';
+      }
 
       // } 
 
       if (!emailPattern.test(userEmail)) {
         document.getElementById('email-verified-warning').style.display = 'block';
         return;
-      } else{
+      } else {
         document.getElementById('email-verified-warning').style.display = 'none';
         // document.getElementById("login-form").submit(); 계속 오류발생!
       }
 
-      if(!passwordPattern.test(userPassword)){
+      if (!passwordPattern.test(userPassword)) {
         document.getElementById('password-verified-warning').style.display = 'block';
         return;
-      } else{
+      } else {
         document.getElementById('password-verified-warning').style.display = 'none';
       }
 
-      
+
     });
 
   </script>

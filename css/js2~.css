@@ -85,10 +85,8 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 #primary-btn {
-  display: inline-flex;
+
   padding: 12px 32px;
-  /* justify-content: center;
-  align-items: center; */
   gap: 8px;
   background: #fd5fb9;
   color: white;
@@ -221,7 +219,8 @@ h1,h2,h3,h4,h5,h6 {
 
 .slide-container {
   width: 300vw;
-  transform: translateX(-100vw);
+  transition: all 1s;
+  /* transform: translateX(100vw); */
 }
 .slide-box {
   width: 100vw;
@@ -230,3 +229,11 @@ h1,h2,h3,h4,h5,h6 {
 .slide-box img {
   width: 100%;
 } 
+
+.carouselBtn{
+  padding: 12px 32px;
+  gap: 8px;
+  background: #fd5fb9;
+  color: white;
+  font-size: 16px;
+}
