@@ -82,6 +82,23 @@
   <button class="slide-1 carouselBtn">1</button>
   <button class="slide-2 carouselBtn">2</button>
   <button class="slide-3 carouselBtn">3</button>
+  <button class="nextToSlide carouselBtn">다음</button>
+
+  <script>
+
+    let nowPic = 1;
+    document.querySelector('.nextToSlide').addEventListener("click",function(){
+      if(nowPic == 1){
+        document.querySelector('.slide-container').style.transform = 'translateX(-100vw)';
+      nowPic += 1;
+      }
+      else if(nowPic == 2){
+        document.querySelector('.slide-container').style.transform = 'translateX(-200vw)';
+      }
+      
+      
+    });
+  </script>
 
   <script>
     document.querySelector('.slide-1').addEventListener('click', function () {
