@@ -82,35 +82,59 @@
   <button class="slide-1 carouselBtn">1</button>
   <button class="slide-2 carouselBtn">2</button>
   <button class="slide-3 carouselBtn">3</button>
-  <button class="nextToSlide carouselBtn">다음</button>
+  <button class="next-Slide-right carouselBtn">다음</button>
+  <button class="next-Slide-left carouselBtn">이전</button>
 
-  <script>
-
-    let nowPic = 1;
-    document.querySelector('.nextToSlide').addEventListener("click",function(){
-      if(nowPic == 1){
-        document.querySelector('.slide-container').style.transform = 'translateX(-100vw)';
-      nowPic += 1;
-      }
-      else if(nowPic == 2){
-        document.querySelector('.slide-container').style.transform = 'translateX(-200vw)';
-      }
-      
-      
-    });
-  </script>
 
   <script>
     document.querySelector('.slide-1').addEventListener('click', function () {
       document.querySelector('.slide-container').style.transform = 'translateX(0vw)';
-    });   
+    });
     document.querySelector('.slide-2').addEventListener('click', function () {
       document.querySelector('.slide-container').style.transform = 'translateX(-100vw)';
-    });   
+    });
     document.querySelector('.slide-3').addEventListener('click', function () {
       document.querySelector('.slide-container').style.transform = 'translateX(-200vw)';
     });   
   </script>
+
+
+  <script>
+
+    let nowPic = 1;
+    document.querySelector('.next-Slide-right').addEventListener("click", function () {
+      if (nowPic == 1) {
+        document.querySelector('.slide-container').style.transform = 'translateX(-100vw)';
+        nowPic += 1;
+      }
+      else if (nowPic == 2) {
+        document.querySelector('.slide-container').style.transform = 'translateX(-200vw)';
+        nowPic -= 2;
+      }
+      else if (nowPic == 0) {
+        document.querySelector('.slide-container').style.transform = 'translateX(0vw)';
+        nowPic += 1;
+      }
+
+    });
+  </script>
+
+  <script>
+    let nowPic2 = 1;  
+
+    document.querySelector('.next-Slide-left').addEventListener("click", function () {
+      if (nowPic2 == 1) {
+        document.querySelector('.slide-container').style.transform = 'translateX(100vw)';
+        nowPic2--;  
+      } else if (nowPic2 == 2) {
+        document.querySelector('.slide-container').style.transform = 'translateX(100vw)';
+        nowPic2++;  
+      } else if (nowPic2 == 0) {
+        document.querySelector('.slide-container').style.transform = 'translateX(100vw)';
+      }
+    });
+  </script>
+
 
   <script>
 
